@@ -33,8 +33,8 @@ const adj = [
   "sadbear", "lazybear", "greatbear", "fastzilla", "smartbear", "weirdbear", "bravebear", "sadcat", "happycat", "bigbear"
 ];
 
-const noun = [
-  "perro", "gato", "ratón", "león", "tigre", "pájaro", "pez", "caballo", "elefante", "jirafa",
+const noun = ['puedes'
+  /*"perro", "gato", "ratón", "león", "tigre", "pájaro", "pez", "caballo", "elefante", "jirafa",
   "chien", "chat", "souris", "lion", "oiseau", "poisson", "cheval", "éléphant", "girafe",
   "hund", "katze", "maus", "löwe", "tiger", "vogel", "fisch", "pferd", "elefant", "giraffe",
   "cane", "gatto", "topo", "leone", "uccello", "pesce", "cavallo", "giraffa",
@@ -48,7 +48,7 @@ const noun = [
   "racoonman", "ninjacat", "alientron", "piratebear", "tigerbot", "lionbot", "wizardcat", "joggerbear", "robotdog", "piratecat",
   "lioncat", "racoonbear", "alienbot", "tigertron", "joggercat", "robotbear", "wizardbot", "pirateman", "liontron", "tigerzilla",
   "wizardman", "racooncat", "robotman", "eagletron", "joggerbot", "racoontron", "alienbear", "eagleman", "ninjadog", "eaglecat"
-];
+*/];
 
 const tlds = [
   "com", "net", "org", "info", "biz", "us", "co", "io", "me", "tv",
