@@ -33,7 +33,7 @@ const adj = [
   "sadbear", "lazybear", "greatbear", "fastzilla", "smartbear", "weirdbear", "bravebear", "sadcat", "happycat", "bigbear"
 ];
 
-const noun = ['puedes'
+const noun = ["maus"
   /*"perro", "gato", "ratón", "león", "tigre", "pájaro", "pez", "caballo", "elefante", "jirafa",
   "chien", "chat", "souris", "lion", "oiseau", "poisson", "cheval", "éléphant", "girafe",
   "hund", "katze", "maus", "löwe", "tiger", "vogel", "fisch", "pferd", "elefant", "giraffe",
