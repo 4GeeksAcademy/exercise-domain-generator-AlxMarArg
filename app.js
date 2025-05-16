@@ -104,7 +104,6 @@ function addAleatory(arr) {
     return arr[Math.floor(Math.random() *arr.length)];
 }
 function domainHack(wor) {
-  console.log('Llegue 2');
     for (let i = 0; i < tlds.length; i++) {
         if (wor.endsWith(tlds[i])) {
             let con=wor.slice(0, wor.length - tlds[i].length)+ '.' + tlds[i];
