@@ -1,4 +1,4 @@
-const pronoun = [
+const pronoun = [//solicitado a gpt 200 pronombres
   "el", "la", "los", "las", "mi", "tu", "su", "nuestro", "nuestra", "vuestro",
   "vuestra", "ellos", "ellas", "yo", "tú", "usted", "nosotros", "nosotras", "vosotros", "vosotras",
   "le", "les", "mon", "ton", "son", "notre", "votre", "leur", "je", "il", "elle", "nous", "vous", "ils", "elles", "ce", "cette", "ces",
@@ -16,7 +16,7 @@ const pronoun = [
   "herdog", "yourman", "itschat", "hischat", "thechat", "theirman", "thatman", "ourchat", "thisman", "thisbot"
 ];
 
-const adj = [
+const adj = [//solicitado a gpt 200 adjetivos
   "grande", "pequeño", "rápido", "lento", "feliz", "triste", "fuerte", "débil", "viejo", "joven",
   "grand", "petit", "rapide", "lent", "heureux", "fort", "faible", "vieux", "jeune",
   "groß", "klein", "schnell", "langsam", "glücklich", "traurig", "stark", "schwach", "alt", "jung",
@@ -33,7 +33,7 @@ const adj = [
   "sadbear", "lazybear", "greatbear", "fastzilla", "smartbear", "weirdbear", "bravebear", "sadcat", "happycat", "bigbear"
 ];
 
-const noun = [
+const noun = [//solicitado a gpt 200 nombres
   "perro", "gato", "ratón", "león", "tigre", "pájaro", "pez", "caballo", "elefante", "jirafa",
   "chien", "chat", "souris", "lion", "oiseau", "poisson", "cheval", "éléphant", "girafe",
   "hund", "katze", "maus", "löwe", "tiger", "vogel", "fisch", "pferd", "elefant", "giraffe",
@@ -50,7 +50,7 @@ const noun = [
   "wizardman", "racooncat", "robotman", "eagletron", "joggerbot", "racoontron", "alienbear", "eagleman", "ninjadog", "eaglecat"
 ];
 
-const tlds = [
+const tlds = [//solicitado a gpt 300 extensiones, han salido cosas muy raras
   "com", "net", "org", "info", "biz", "us", "co", "io", "me", "tv",
   "us", "uk", "fr", "de", "it", "es", "pt", "nl", "ru", "cn",
   "jp", "kr", "br", "ar", "mx", "ca", "au", "nz", "in", "id",
@@ -94,22 +94,61 @@ const tlds = [
   "fyx", "txg", "cmz", "rva", "jdp", "wnl", "ozg", "cbm", "vtq", "khz",
   "bcp", "nqu", "xym", "pqg", "nib", "wuq", "hoz", "rzi", "ftm", "ywv"
 ];
-
+const colors = [
+'#00bfff', '#198754', '#dc3545', '#ffc107', '#f8f9fa'
+];
+const bcolors = [
+'btn-outline-primary', 'btn-outline-success', 'btn-outline-danger', 'btn-outline-warning', 'btn-outline-light'
+];
+let colorInd=0;
+let rootElement = document.documentElement;
+rootElement.style.setProperty("--color", colors[colorInd]);
+colorInd++;
+let b1 = document.getElementById('button1').classList 
+let b2 = document.getElementById('button2').classList 
 function createDomain() {
-    const gene= document.getElementById("generated");
     let text =domainHack(addAleatory(pronoun)+addAleatory(adj)+addAleatory(noun));
-    gene.innerHTML = text.toUpperCase();
 }
 function addAleatory(arr) {
     return arr[Math.floor(Math.random() *arr.length)];
 }
+function changeColor() {//¡¡Me ha llevado horas que tenga este efecto!!
+    if (colorInd===0){
+        rootElement.style.setProperty("--color", colors[colorInd]);
+	b1.remove(bcolors[4]);
+	b2.remove(bcolors[4]);
+	b1.add(bcolors[colorInd]);
+	b2.add(bcolors[colorInd]);
+        colorInd++;
+    }else if (colorInd===4){
+        rootElement.style.setProperty("--color", colors[colorInd]);
+	b1.remove(bcolors[3]);
+	b2.remove(bcolors[3]);
+	b1.add(bcolors[colorInd]);
+	b2.add(bcolors[colorInd]);
+        colorInd=colorInd-4;
+    }else{
+        rootElement.style.setProperty("--color", colors[colorInd]);
+	b1.remove(bcolors[colorInd-1]);
+	b2.remove(bcolors[colorInd-1]);
+	b1.add(bcolors[colorInd]);
+	b2.add(bcolors[colorInd]);
+	colorInd++;
+    }
+}
 function domainHack(wor) {
+    let con = '';
     for (let i = 0; i < tlds.length; i++) {
         if (wor.endsWith(tlds[i])) {
-            let con=wor.slice(0, wor.length - tlds[i].length)+ '.' + tlds[i];
+            con=wor.slice(0, wor.length - tlds[i].length)+ '.' + tlds[i];
+            document.getElementById("generated-outline").innerText = con;
+            document.getElementById("generated-fill").innerText = con;
             return con;
         }
     }
-    return wor+'.'+addAleatory(tlds); 
+    con = wor+'.'+addAleatory(tlds); 
+    document.getElementById("generated-outline").innerText = con;
+    document.getElementById("generated-fill").innerText = con;
+    return con;
 }
 createDomain();
