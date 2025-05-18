@@ -1,4 +1,4 @@
-const pronoun = [//solicitado a gpt 200 pronombres
+const pronoun = [//solicitado a gpt un array de 200 pronombres
   "el", "la", "los", "las", "mi", "tu", "su", "nuestro", "nuestra", "vuestro",
   "vuestra", "ellos", "ellas", "yo", "tú", "usted", "nosotros", "nosotras", "vosotros", "vosotras",
   "le", "les", "mon", "ton", "son", "notre", "votre", "leur", "je", "il", "elle", "nous", "vous", "ils", "elles", "ce", "cette", "ces",
@@ -16,7 +16,7 @@ const pronoun = [//solicitado a gpt 200 pronombres
   "herdog", "yourman", "itschat", "hischat", "thechat", "theirman", "thatman", "ourchat", "thisman", "thisbot"
 ];
 
-const adj = [//solicitado a gpt 200 adjetivos
+const adj = [//solicitado a gpt un array de 200 adjetivos
   "grande", "pequeño", "rápido", "lento", "feliz", "triste", "fuerte", "débil", "viejo", "joven",
   "grand", "petit", "rapide", "lent", "heureux", "fort", "faible", "vieux", "jeune",
   "groß", "klein", "schnell", "langsam", "glücklich", "traurig", "stark", "schwach", "alt", "jung",
@@ -33,7 +33,7 @@ const adj = [//solicitado a gpt 200 adjetivos
   "sadbear", "lazybear", "greatbear", "fastzilla", "smartbear", "weirdbear", "bravebear", "sadcat", "happycat", "bigbear"
 ];
 
-const noun = [//solicitado a gpt 200 nombres
+const noun = [//solicitado a gpt un array de 200 nombres
   "perro", "gato", "ratón", "león", "tigre", "pájaro", "pez", "caballo", "elefante", "jirafa",
   "chien", "chat", "souris", "lion", "oiseau", "poisson", "cheval", "éléphant", "girafe",
   "hund", "katze", "maus", "löwe", "tiger", "vogel", "fisch", "pferd", "elefant", "giraffe",
@@ -50,7 +50,7 @@ const noun = [//solicitado a gpt 200 nombres
   "wizardman", "racooncat", "robotman", "eagletron", "joggerbot", "racoontron", "alienbear", "eagleman", "ninjadog", "eaglecat"
 ];
 
-const tlds = [//solicitado a gpt 300 extensiones, han salido cosas muy raras
+const tlds = [//solicitado a gpt un array de 300 extensiones, han salido cosas muy raras
   "com", "net", "org", "info", "biz", "us", "co", "io", "me", "tv",
   "us", "uk", "fr", "de", "it", "es", "pt", "nl", "ru", "cn",
   "jp", "kr", "br", "ar", "mx", "ca", "au", "nz", "in", "id",
